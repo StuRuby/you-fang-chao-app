@@ -28,6 +28,9 @@ export default {
   props: {
     msg: String
   },
+  created() {
+    this.$http.get("/user/userinfo").then(res => console.log(res));
+  }
 };
 </script>
 
